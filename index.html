@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع المحادثة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+    <div id="login-page">
+        <h1>تسجيل الدخول</h1>
+        <input type="text" id="username" placeholder="اسم المستخدم">
+        <input type="password" id="password" placeholder="كلمة المرور">
+        <button onclick="login()">تسجيل الدخول</button>
+        <p id="error-message"></p>
+    </div>
+    <div id="chat-page" class="hidden">
+        <header>
+            <h2>غرفة المحادثة</h2>
+            <button onclick="logout()">تسجيل الخروج</button>
+            <button onclick="openSettings()">الإعدادات</button>
+        </header>
+        <div id="chat-box"></div>
+        <div id="message-box">
+            <input type="text" id="message-input" placeholder="اكتب رسالة...">
+            <button onclick="sendMessage()">إرسال</button>
+        </div>
+    </div>
+    <div id="settings-page" class="hidden">
+        <h2>الإعدادات</h2>
+        <input type="text" id="new-username" placeholder="اسم المستخدم الجديد">
+        <input type="password" id="new-password" placeholder="كلمة المرور الجديدة">
+        <input type="file" id="profile-picture" accept="image/*">
+        <button onclick="saveSettings()">حفظ</button>
+        <button onclick="closeSettings()">إلغاء</button>
+    </div>
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
